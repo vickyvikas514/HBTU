@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "409418765270",
+    "project_id": "hbtu-faba5",
+    "storage_bucket": "hbtu-faba5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409418765270:android:127e88562581d189018a77",
+        "android_client_info": {
+          "package_name": "com.example.hbtu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATLDg4-mXHIYX-ZLUrLJ6ohBcamJuVudg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
