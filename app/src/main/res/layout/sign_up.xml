@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/signup"
+    android:background="@drawable/sign_up"
     app:layout_anchorGravity="center"
     android:padding="12dp"
     android:layout_gravity="center"
@@ -23,13 +23,15 @@
             android:layout_width="155dp"
             android:layout_height="155dp"
             app:cardCornerRadius="250dp"
+            android:layout_marginTop="30dp"
             app:cardBackgroundColor="@color/black">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="250dp"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+               >
 
                 <ImageView
                     android:layout_width="150dp"
@@ -133,7 +135,9 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
+            android:background="@color/black"
+            android:layout_marginTop="18dp"
             android:text="Already Registered , Sign In !"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
