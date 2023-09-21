@@ -2,6 +2,7 @@ package com.example.hbtu.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import com.example.hbtu.DepartmentActivity
 import com.example.hbtu.DetailActivity
 import com.example.hbtu.HomeSource
 import com.example.hbtu.R
+import com.example.hbtu.SyllabusActivity
 
 class HomeAdapter(
     private val context: Context?
@@ -35,15 +37,20 @@ class HomeAdapter(
         holder.imageDp.text = item.imageresourceid
         val resources = context?.resources
         holder.itemView.setOnClickListener{
-            if(item.url=="different"){
+            if(item.url=="department"){
                 val intent = Intent(context,DepartmentActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                // intent.putExtra("URL",item.url)
                 context?.startActivity(intent)
-            }else{
-                val intent = Intent(context,DetailActivity::class.java)
+            }else if(item.url=="syllabus"){
+                val intent = Intent(context,SyllabusActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                intent.putExtra("URL",item.url)
+                // intent.putExtra("URL",item.url)
+                context?.startActivity(intent)
+            }else{
+                val intent = Intent(android.content.Intent.ACTION_VIEW)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                intent.data = Uri.parse(item.url)
                 context?.startActivity(intent)
             }
 

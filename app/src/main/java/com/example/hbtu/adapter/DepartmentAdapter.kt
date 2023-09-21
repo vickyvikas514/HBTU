@@ -2,6 +2,7 @@ package com.example.hbtu.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,9 +37,9 @@ class DepartmentAdapter(
         val resources = context?.resources
         holder.itemView.setOnClickListener{
 
-                val intent = Intent(context,DetailActivity::class.java)
+                val intent = Intent(android.content.Intent.ACTION_VIEW)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                 intent.putExtra("URL",item.url)
+                 intent.data = Uri.parse(item.url)
                 context?.startActivity(intent)
 
 
